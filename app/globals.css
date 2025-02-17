@@ -3,19 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-1 : #2C3E50;
+  --primary-2 : #4A6D8C;
+  --primary-3 : #A4C8E1;
+  --primary-4 : #D1E8F2;
+  --primary-5 : #F4F9F9;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary-1 : #2C3E50;
+    --primary-2 : #4A6D8C;
+    --primary-3 : #A4C8E1;
+    --primary-4 : #D1E8F2;
+    --primary-5 : #F4F9F9;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: white;
+  background: var(--primary-3);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  @apply font-m1
+}
+
+.font-h1{
+  @apply tracking-wider text-3xl
+}
+
+.font-b1{
+  @apply tracking-wider
+}
+@layer components {
+  .navbarButton {
+    @apply font-m1 text-center bg-primary4 text-primary1 hover:bg-primary2 hover:text-primary4 items-stretch
+  }           
 }
