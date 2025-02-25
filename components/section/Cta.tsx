@@ -1,7 +1,7 @@
 export default async function Cta(){
     return(
         <>
-            <section className='w-full relative text-primary5'>
+            <section className='w-full relative text-primary5' id="contactUs">
                 <div className='p-[3em] bg-primary1'>
                     <header>
                         <h3 className='font-h1 pb-[1em]'>CTA</h3>

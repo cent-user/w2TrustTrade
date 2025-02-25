@@ -1,7 +1,9 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/instruments/page": "app/instruments/page.js",
-  "/images/page": "app/images/page.js",
+  "/catalog/furniture_list/page": "app/catalog/furniture_list/page.js",
+  "/catalog/furniture_set_list/[id]/page": "app/catalog/furniture_set_list/[id]/page.js",
+  "/catalog/furniture_set_list/page": "app/catalog/furniture_set_list/page.js",
+  "/catalog/page": "app/catalog/page.js",
   "/(home)/page": "app/(home)/page.js"
 }

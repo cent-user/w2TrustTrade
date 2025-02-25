@@ -27,18 +27,32 @@ body {
 }
 
 button {
-  @apply font-m1
+  @apply font-m1 
 }
 
 .font-h1{
-  @apply tracking-wider text-3xl
+  @apply tracking-wider text-3xl font-semibold
 }
 
 .font-b1{
-  @apply tracking-wider
+  @apply tracking-wider text-lg
+}
+
+.font-m1{
+  @apply tracking-wider text-lg
+}
+
+.clsHowToOrderTable{
+  tr td{
+    @apply p-[.2em]
+  }
 }
 @layer components {
   .navbarButton {
-    @apply font-m1 text-center bg-primary4 text-primary1 hover:bg-primary2 hover:text-primary4 items-stretch
-  }           
+    @apply font-m1 text-center bg-primary4 text-primary1 hover:bg-primary2 hover:text-primary4  content-stretch items-stretch h-full text-center
+  }
+  
+  .button {
+    @apply block outline outline-primary2 -outline-offset-[.5em] p-[1em] rounded-xl hover:outline-primary3
+  }
 }

@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
          className={`${PlayfairDisplay.variable} ${EBGaramond.variable} ${IBM_Plex_Mono.variable} antialiased`}
       >
-        <header>
+        <header className="fixed z-[5] w-screen">
           <HeadNavigation />
         </header>
         {children}
