@@ -3,3 +3,6 @@ name = "my-app"
 compatibility_date = "2025-02-13"
 compatibility_flags = ["nodejs_compat"]
 assets = { directory = ".open-next/assets", binding = "ASSETS" }
+routes = [
+  { pattern = "furniture.w2trusttrade.com", custom_domain = true }
+]

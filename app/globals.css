@@ -47,6 +47,24 @@ button {
     @apply p-[.2em]
   }
 }
+
+/* Style for all unordered lists */
+.description ul {
+  list-style-type: square;  /* Change bullets to square */
+  padding-left: 20px;       /* Adjusts indentation */
+}
+
+/* Style for all ordered lists */
+.description  ol {
+  list-style-type: decimal; /* Standard numbers for ordered lists */
+  padding-left: 20px;       /* Adjusts indentation */
+}
+
+/* Style for all list items inside ul and ol */
+.description  li {
+  margin-bottom: 8px;  /* Adds space between list items */
+}
+
 @layer components {
   .navbarButton {
     @apply font-m1 text-center bg-primary4 text-primary1 hover:bg-primary2 hover:text-primary4  content-stretch items-stretch h-full text-center

@@ -3,7 +3,7 @@ export default function SetThumbnail(prop:any) {
     return (
 
         <div className='relative w-full h-full flex flex-col basis[1]'>
-            <div className='relative grow-[1]'>
+            <div className='relative grow-[1] bg-primary5'>
                 <Image src={prop.image_url} 
                     quality={1} 
                     placeholder = 'empty'
@@ -13,7 +13,7 @@ export default function SetThumbnail(prop:any) {
                     className='relative block'
                 />
             </div>
-            <div className='text-center'>
+            <div className='text-center bg-primary1 rounded-b-lg basis-[1]'>
                 {prop.furniture_name}
             </div>
         </div>

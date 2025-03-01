@@ -25,7 +25,7 @@ export default function BreadCrumb() {
     });
 
     return (
-        <nav className='h-[1em] m-[1em] flex'>
+        <nav className='ml-[1em] mb-[1em] pl-[.5em] pr-[.5em] relative w-fit flex bg-primary4 text-primary1 rounded-lg font-m1 !text-sm'>
             {breadcrumbElements}
         </nav>
     );
@@ -35,7 +35,7 @@ export default function BreadCrumb() {
 function createBreadCrumb({ index, path, pathName }: CreateBreadCrumbProps) {
     return (
         <div key={index} className=''>
-            /<Link href={`/${path.join('/')}`}>{pathName}</Link>
+           <Link href={`/${path.join('/')}`} className=''>&nbsp;/&nbsp;{pathName.replaceAll('_',' ')}</Link>
         </div>
     );
 }

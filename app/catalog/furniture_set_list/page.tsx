@@ -1,8 +1,7 @@
 import { supabase } from '@/utils/supabase/supabase-storage';
 import { createClient } from '@/utils/supabase/server';
-import SetThumbnail from "../../../components/ui/SetThumbnail";
+import SetThumbnail2 from "../../../components/ui/SetThumbnail2";
 import Paging from "../../../components/ui/Paging";
-import BreadCrumb from "../../../components/ui/BreadCrumb";
 import Link from 'next/link'
 
 
@@ -26,13 +25,12 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
     }    
     
     for(let cFPC = 0;cFPC < FurniturePageCount;cFPC++){
-      product_list_paging.push(generatePaging((cFPC+1)));
+      product_list_paging.push(generatePaging((cFPC+1),pageProp['curr']));
     }
   }
   
   
   return <>
-  <BreadCrumb></BreadCrumb>
   <section className='relative flex max-w-screen flex-col m-[1em]'>
       <header className="bg-primary5 text-primary1 font-h1 flex justify-center p-[1em]">
           <h3>Our Set Collection</h3>
@@ -40,7 +38,7 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
       <div className='relative bg-primary2 basis-[1] grow-[1] flex flex-row flex-wrap justify-evenly'>
           {set_list}
       </div>
-      <div className='flex bg-primary1 w-full justify-center'>
+      <div className='flex bg-primary1 w-full justify-center flex-wrap'>
           {product_list_paging}
       </div>
   </section>
@@ -67,12 +65,11 @@ async function getFurnitureSetCount(){
      prop['id']         = Furniture.id;
      prop['image_url']  = obj_image.publicUrl;
      prop['furniture_name']  = Furniture.name;
-     console.log(Furniture);
      return (
         
         <div className='min-w-[300px] min-h-[300px] sm:min-w-[400px] sm:min-h-[400px]  max-w-[500px]  grow-[1] p-[.5em]'>
             <Link href={"/catalog/furniture_set_list/"+Furniture.id}>
-              <SetThumbnail {...prop} ></SetThumbnail>
+              <SetThumbnail2 {...prop} ></SetThumbnail2>
             </Link>
         </div>
     
@@ -82,17 +79,19 @@ async function getFurnitureSetCount(){
    async function getFurnitureSetPaged(pageProp:any){
      const supabase = await createClient();
      const { data } = await supabase.rpc('get_furniture_set_paged',{limit_param:pageProp['limit'],offset_param:pageProp['offset']});
-      console.log(data);
+
      return data;
    }
 
-  async function generatePaging(page:any){
+  async function generatePaging(page:any,currpage = '1'){
 
     const prop:{[key:string]:string}= {};
-    prop['url'] = '/catalog/furniture_list';
+    prop['url'] = '/catalog/furniture_set_list';
     prop['page'] = page;
+    prop['curr'] = currpage;
     return <Paging {...prop}></Paging>
   }
 
+  
 
   

@@ -1,9 +1,11 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
+  "/(home)/api/route": "app/(home)/api/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/catalog/furniture_list/[id]/page": "app/catalog/furniture_list/[id]/page.js",
   "/catalog/furniture_list/page": "app/catalog/furniture_list/page.js",
   "/catalog/furniture_set_list/[id]/page": "app/catalog/furniture_set_list/[id]/page.js",
   "/catalog/furniture_set_list/page": "app/catalog/furniture_set_list/page.js",
-  "/catalog/page": "app/catalog/page.js",
-  "/(home)/page": "app/(home)/page.js"
+  "/catalog/page": "app/catalog/page.js"
 }

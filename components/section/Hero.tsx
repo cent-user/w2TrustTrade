@@ -1,8 +1,9 @@
 import { supabase } from '@/utils/supabase/supabase-storage';
 import Image from 'next/image'
+import Link from 'next/link'
 
 async function HeroImages() {
-    const { data } = supabase.storage.from('w2trusttrade-furniture').getPublicUrl('photoset/1.jpg')
+    const { data } = supabase.storage.from('w2trusttrade-furniture').getPublicUrl('photoset/set_1.jpg')
     return data;
 }
 
@@ -19,17 +20,21 @@ export default async function Hero(){
                             <h1 className='z-[2] font-h1'>WilNWin Furniture</h1>    
                             <h2 className='font-b1'>&quot; Timeless Elegance, Handcrafted in Indonesia &quot;</h2>
                         </header>
-                        <div className='pt-[1em]'>
-                            <button className='button'>Contact Us</button>
+                        <div className='pt-[1em] flex'>
+                            <Link href="#contact_us">
+                                <button className='button'>Contact Us</button>
+                            </Link>
+                            <Link href="/catalog" >
+                                <button className='button'>Our Product</button>
+                            </Link>
                         </div>
                     </div>   
                 </div>
                 <div className='z-[1] flex relative w-full h-full'>
                 <Image src={imageUrl.publicUrl} 
-                quality={10} 
+                quality={100} 
                 placeholder = 'empty'
                 fill 
-                sizes="100vw" 
                 style={{
                  objectFit: 'cover',
                 }}

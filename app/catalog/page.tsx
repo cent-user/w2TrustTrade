@@ -39,8 +39,10 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
                 <div className='flex justify-evenly flex-wrap p-[1em]'>
                     {set_list}
                 </div>
-                <div>
-                    <Link href="/catalog/furniture_set_list"><h4>See More</h4></Link>
+                <div className=''>
+                    <Link href="/catalog/furniture_set_list">
+                        <div className='button text-center font-m1'>See More</div>
+                    </Link>
                 </div>
             </section>
             <section className="bg-primary1 ">
@@ -50,8 +52,10 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
                 <div className='flex justify-evenly flex-wrap p-[1em]'>
                     {product_list}
                 </div>
-                <div>
-                    <Link href="/catalog/furniture_list"><h4>See More</h4></Link>
+                <div className=''>
+                    <Link href="/catalog/furniture_list">
+                        <div className='button text-center font-m1'>See More</div>
+                    </Link>
                 </div>
             </section>
     </div>
@@ -72,7 +76,9 @@ async function generateProductContainer(Furniture:any){
     prop['furniture_name']  = Furniture.name;
     return (
     <div className='min-w-[100px] sm:min-w-[150px]  min-h-[120px] w-[10vw] basis-[1'>
-        <ProductThumbnail {...prop} ></ProductThumbnail>
+        <Link href={"/catalog/furniture_list/"+Furniture.id}>
+            <ProductThumbnail {...prop} ></ProductThumbnail>
+        </Link>
     </div>
     )
   }
@@ -86,7 +92,9 @@ async function generateProductContainer(Furniture:any){
     prop['furniture_name']  = Furniture.name;
     return (
     <div className='min-w-[200px] sm:min-w-[250px] min-h-[250px] grow-[1] p-[.5em]'>
-        <SetThumbnail {...prop} ></SetThumbnail>
+        <Link href={"/catalog/furniture_set_list/"+Furniture.id}>
+            <SetThumbnail {...prop} ></SetThumbnail>
+        </Link>
     </div>
     )
   }
@@ -100,9 +108,11 @@ async function generateProductContainer(Furniture:any){
   async function getFurnitureSetPaged(pageProp:any){
     const supabase = await createClient();
     const { data } = await supabase.rpc('get_furniture_set_paged',{limit_param:pageProp['limit'],offset_param:pageProp['offset']});
-    console.log(data);
+
     return data;
   }
+
+
 
 
   

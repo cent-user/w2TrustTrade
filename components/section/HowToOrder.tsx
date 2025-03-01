@@ -7,8 +7,8 @@ import truckSvg from '../../public/icon/truck.svg'
 export default async function FeaturedProduct(){
     return(
         <>
-            <section className='w-full relative text-primary1' id="howToOrder">
-                <div className='p-[3em] bg-primary5'>
+            <section className='w-full relative text-primary5 bg-primary1' id="howToOrder">
+                <div className='p-[3em]'>
                     <header>
                         <h3 className='font-h1 pb-[1em]'>How To Order</h3>
                     </header>
@@ -17,7 +17,7 @@ export default async function FeaturedProduct(){
                             <tbody>
                             <tr>
                                 <td>
-                                <Image src={creditCardSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] '/>
+                                <Image src={creditCardSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] invert'/>
                                 </td>
                                 <td><b>Term Of Payment</b></td>
                                 <td>70% Down Payment after Proforma Invoice Signed
@@ -26,21 +26,21 @@ export default async function FeaturedProduct(){
                             </tr>
                             <tr>
                                 <td>
-                                <Image src={dollarSignSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] '/>
+                                <Image src={dollarSignSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] invert'/>
                                 </td>
                                 <td><b>Pricing</b></td>
-                                <td>US $ FOB Jakarta - Indonesia.</td>
+                                <td>US $ FOB Jakarta - Indonesia. &#40;call for detail / prices&#41;</td>
                             </tr>
                             <tr>
                                 <td>
-                                <Image src={clockSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] '/>
+                                <Image src={clockSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] invert'/>
                                 </td>
                                 <td><b>Delivery Time</b></td>
-                                <td> 1 x 20&apos container, consists of 5-10 Items.</td>
+                                <td> 1 x 20 &quot; container, consists of 5-10 Items.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <Image src={truckSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] '/>
+                                <Image src={truckSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] invert'/>
                                 </td>
                                 <td><b>Minimum Order</b></td>
                                 <td>70% Down Payment after Proforma Invoice Signed
@@ -49,7 +49,7 @@ export default async function FeaturedProduct(){
                             </tr>
                             <tr>
                                 <td>
-                                <Image src={packageSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] '/>
+                                <Image src={packageSvg} width={30} height={30} alt="TOP icon" className='mr-[1em] invert'/>
                                 </td>
                                 <td><b>Packaging</b></td>
                                 <td> Double Wall cart carton box, with styrofoam / cardboard protection.</td>
