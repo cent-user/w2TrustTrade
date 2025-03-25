@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import HeadNavigation from "../../components/ui/HeadNavigation";
+import { GoogleAnalyticsTracking } from '../../components/GoogleAnalytics'
 import "../globals.css";
 
 
@@ -50,6 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalyticsTracking />
       <body
          className={`${PlayfairDisplay.variable} ${EBGaramond.variable} ${IBM_Plex_Mono.variable} antialiased`}
       >

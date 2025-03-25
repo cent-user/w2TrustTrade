@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://furniture.w2trusttrade.com/</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Catalog Pages -->
+  <url>
+    <loc>https://furniture.w2trusttrade.com/catalog</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://furniture.w2trusttrade.com/catalog/furniture_list</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Dynamic pages like product details or furniture sets -->
+  <url>
+    <loc>https://furniture.w2trusttrade.com/catalog/furniture_list/[id]</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://furniture.w2trusttrade.com/catalog/furniture_set_list</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://furniture.w2trusttrade.com/catalog/furniture_set_list/[id]</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- API Route -->
+  <url>
+    <loc>https://furniture.w2trusttrade.com/api/route</loc>
+    <lastmod>2025-03-02</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>

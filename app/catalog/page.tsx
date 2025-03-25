@@ -16,6 +16,11 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
     propSet['offset'] = 0;
     const FurnitureSet = await getFurnitureSetPaged(propSet);
 
+    const propColors: { [key: string]: any } = {};
+    prop['limit'] = 8;
+    prop['offset'] = 0;
+    const Colors = await getColorPaged(prop);
+
     const product_list = [];
     if(Furniture){
         for(let cFurniture = 0;cFurniture < Furniture?.length;cFurniture++){
@@ -27,6 +32,13 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
     if(FurnitureSet){
         for(let cFurnitureSet = 0;cFurnitureSet < FurnitureSet?.length;cFurnitureSet++){
             set_list.push(generateSetContainer(FurnitureSet[cFurnitureSet]));
+          }    
+    }
+
+    const color_list = [];
+    if(Colors){
+        for(let cColors = 0;cColors < Colors?.length;cColors++){
+            color_list.push(generateProductContainer(Colors[cColors]));
           }    
     }
 
@@ -45,7 +57,7 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
                     </Link>
                 </div>
             </section>
-            <section className="bg-primary1 ">
+            <section className="bg-primary1 mb-[1em]">
                 <header className="bg-primary5 text-primary1 font-h1 flex justify-center p-[1em]">
                     <h3>Our Furniture</h3>
                 </header>
@@ -54,6 +66,19 @@ export default async function page({searchParams}:{searchParams: Promise<{[key:s
                 </div>
                 <div className=''>
                     <Link href="/catalog/furniture_list">
+                        <div className='button text-center font-m1'>See More</div>
+                    </Link>
+                </div>
+            </section>
+            <section className="bg-primary1 mb-[1em]">
+                <header className="bg-primary5 text-primary1 font-h1 flex justify-center p-[1em]">
+                    <h3>Avaiable Colors</h3>
+                </header>
+                <div className='flex justify-evenly flex-wrap p-[1em]'>
+                    {color_list}
+                </div>
+                <div className=''>
+                    <Link href="/catalog/colors">
                         <div className='button text-center font-m1'>See More</div>
                     </Link>
                 </div>
@@ -110,6 +135,12 @@ async function generateProductContainer(Furniture:any){
     const { data } = await supabase.rpc('get_furniture_set_paged',{limit_param:pageProp['limit'],offset_param:pageProp['offset']});
 
     return data;
+  }
+
+  async function getColorPaged(pageProp:any){
+    const supabase = await createClient();
+    const { data: Furniture } = await supabase.rpc('get_colors_paged',{limit_param:pageProp['limit'],offset_param:pageProp['offset']});
+    return Furniture;
   }
 
 

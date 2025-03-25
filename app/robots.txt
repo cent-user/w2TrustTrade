@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Allow: /catalog/
+Allow: /catalog/furniture_list/
+Allow: /catalog/furniture_set_list/
+
+Sitemap: https://furniture.w2trusttrade.com/sitemap.xml

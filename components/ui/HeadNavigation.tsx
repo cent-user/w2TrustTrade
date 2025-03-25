@@ -10,6 +10,9 @@ export default function HeadNavigation(){
                     <div className="flex grow-[2] justify-end">
                         <li className="grow"><Link href="/catalog" className="w-full block p-4 navbarButton">Our Product</Link></li>
                     </div>
+                    <div className="flex grow-[2] justify-end">
+                        <li className="grow"><Link href="/why_us" className="w-full block p-4 navbarButton">Why Us</Link></li>
+                    </div>
                 </ul>
             </nav>
         </>

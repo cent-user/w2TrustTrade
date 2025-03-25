@@ -5,6 +5,7 @@ import FeaturedProduct from "../../components/section/FeaturedProduct";
 import HowToOrder from "../../components/section/HowToOrder";
 import Cta from "../../components/section/Cta";
 import Footer from "../../components/section/Footer";
+import Vision from "../../components/section/Vision";
 
 export default function Home() {
 
@@ -12,7 +13,9 @@ export default function Home() {
    <>
    <Hero />
    <About />
+   <Vision />
    <HowToOrder />
+   <FeaturedProduct />
    <Cta />
    <Footer />
    </>

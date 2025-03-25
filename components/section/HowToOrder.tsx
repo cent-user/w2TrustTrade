@@ -7,7 +7,7 @@ import truckSvg from '../../public/icon/truck.svg'
 export default async function FeaturedProduct(){
     return(
         <>
-            <section className='w-full relative text-primary5 bg-primary1' id="howToOrder">
+            <section className='w-full relative text-primary1 bg-primary5' id="howToOrder">
                 <div className='p-[3em]'>
                     <header>
                         <h3 className='font-h1 pb-[1em]'>How To Order</h3>

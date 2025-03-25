@@ -3,8 +3,7 @@ import localFont from 'next/font/local'
 import HeadNavigation from "../../components/ui/HeadNavigation";
 import BreadCrumb from "../../components/ui/BreadCrumb";
 import "../globals.css";
-
-
+import { GoogleAnalyticsTracking } from '../../components/GoogleAnalytics'
  
 const PlayfairDisplay = localFont({
   src: '../../public/fonts/PlayfairDisplay-VariableFont_wght.ttf',
@@ -53,6 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalyticsTracking />
       <body
          className={`${PlayfairDisplay.variable} ${EBGaramond.variable} ${IBM_Plex_Mono.variable} antialiased`}
       >

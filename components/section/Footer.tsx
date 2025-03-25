@@ -10,9 +10,12 @@ export default async function Footer(){
                             <ul>
                                 <li className=""><Link href="/#home">Home</Link></li>
                                 <li className="ml-[1em]"><Link href="/#aboutUs">About Us</Link></li>
+                                <li className="ml-[1em]"><Link href="/#vision">Vision</Link></li>
                                 <li className="ml-[1em]"><Link href="/#howToOrder">How To Order</Link></li>
+                                <li className="ml-[1em]"><Link href="/#featuredProducts">Featured Products</Link></li>
                                 <li className="ml-[1em]"><Link href="/#contactUs">Contact Us</Link></li>
                                 <li className=""><Link href="/catalog">Our Product</Link></li>
+                                <li className=""><Link href="/why_us">Why Us</Link></li>
                             </ul>
                         </div>
                         <div id="contact_us" className='description'>

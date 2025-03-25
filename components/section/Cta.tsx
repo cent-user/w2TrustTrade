@@ -67,8 +67,8 @@ export default function Cta(){
                 {FlagInsertCta !== 'Success' && (
                     <Form action="/search" className='w-full' onSubmit={handleSubmit}>
                         <div className='flex flex-col'>
-                            <div className='flex justify-evenly'><input type="email" name="email" value={Email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required className='w-[80%] h-[3em] outline outline-primary2 '/></div>
-                            <div className='flex justify-evenly'><button type="submit" className='button'>Request Custom Design / Get a Quote</button></div>
+                            <div className='flex justify-evenly text-center font-m1 '><input type="email" name="email" value={Email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required className='w-[80%] h-[3em] outline outline-primary2 '/></div>
+                            <div className='flex justify-evenly text-center font-m1 mt-[1em]'><button type="submit" className='button'>Request Custom Design / Get a Quote</button></div>
                         </div>
                     </Form>
                 )}
